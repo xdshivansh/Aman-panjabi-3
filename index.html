@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Panjabi Restaurant | Authentic Punjabi Taste</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons (UMD) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>Aman Panjabi</h1>
+                <span>Authentic Taste</span>
+            </div>
+            
+            <nav class="desktop-nav">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i data-lucide="shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </button>
+                <a href="tel:9588812154" class="btn btn-call hide-mobile">
+                    <i data-lucide="phone"></i> 9588812154
+                </a>
+                <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-overlay">
+        <button class="close-btn" onclick="toggleMobileMenu()"><i data-lucide="x"></i></button>
+        <nav>
+            <a href="#home" onclick="toggleMobileMenu()">Home</a>
+            <a href="#menu" onclick="toggleMobileMenu()">Menu</a>
+            <a href="#gallery" onclick="toggleMobileMenu()">Gallery</a>
+            <a href="#about" onclick="toggleMobileMenu()">About</a>
+            <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+            <a href="tel:9588812154" class="btn btn-call"><i data-lucide="phone"></i> Call Now</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="badge">Est. 2010</span>
+            <h2>Taste the Richness of Punjab</h2>
+            <p>Serving authentic North Indian flavors with hygiene and warmth since 2010. Located near Bundi Highway, Rajasthan.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-primary">Browse Menu</a>
+                <a href="#contact" class="btn btn-secondary">Visit Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container grid-5">
+            <div class="feature-item">
+                <i data-lucide="utensils"></i>
+                <span>Pure Desi Ghee</span>
+            </div>
+            <div class="feature-item">
+                <i data-lucide="users"></i>
+                <span>Family Dining</span>
+            </div>
+            <div class="feature-item">
+                <i data-lucide="clock"></i>
+                <span>Fast Service</span>
+            </div>
+            <div class="feature-item">
+                <i data-lucide="shield-check"></i>
+                <span>Hygienic Kitchen</span>
+            </div>
+            <div class="feature-item">
+                <i data-lucide="truck"></i>
+                <span>Takeaway Ready</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Special Menu</h2>
+                <p>Select your favorites to build a WhatsApp order</p>
+                <div class="divider"></div>
+            </div>
+
+            <div id="menu-container" class="menu-grid">
+                <!-- Menu categories will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Photo Gallery</h2>
+                <p>A glimpse into our kitchen and dining</p>
+                <div class="divider"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80&w=600" alt="Food"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&q=80&w=600" alt="Food"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600" alt="Interior"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce70?auto=format&fit=crop&q=80&w=600" alt="Food"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1626132646529-5003375a954e?auto=format&fit=crop&q=80&w=600" alt="Drinks"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=600" alt="Exterior"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container about-flex">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800" alt="Chef Cooking">
+                <div class="experience-tag">
+                    <strong>15+</strong>
+                    <span>Years of Taste</span>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>Serving Tradition Since 2010</h2>
+                <p>Aman Panjabi Restaurant is a household name in Bundi for anyone seeking authentic North Indian and Punjabi cuisine. Our journey started with a simple goal: to serve food that tastes like home.</p>
+                <p>We take pride in our hygiene standards and use only the finest spices sourced directly from local markets. Whether it's our Dal Makhani simmered overnight or our crisp Butter Naans, quality is never compromised.</p>
+                <ul class="about-list">
+                    <li><i data-lucide="check-circle"></i> Authentic Punjabi Recipes</li>
+                    <li><i data-lucide="check-circle"></i> Fresh Ingredients Daily</li>
+                    <li><i data-lucide="check-circle"></i> Hygienic Preparation</li>
+                    <li><i data-lucide="check-circle"></i> Warm Hospitality</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Guests Say</h2>
+                <p>Real reviews from our Google Profile</p>
+                <div class="divider"></div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The best Paneer Tikka I've ever had in Bundi. Truly authentic taste!"</p>
+                    <div class="reviewer">- Rahul Sharma</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Very clean restaurant and extremely polite staff. Lassi is a must-try!"</p>
+                    <div class="reviewer">- Anjali Gupta</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Great place for family dinner. The Dal Makhani is outstanding."</p>
+                    <div class="reviewer">- Vikram Singh</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h2>Visit Us</h2>
+                    <div class="info-item">
+                        <i data-lucide="map-pin"></i>
+                        <p>Near Bundi Highway, Bundi, Rajasthan</p>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="phone"></i>
+                        <p>+91 95888 12154</p>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="clock"></i>
+                        <p>Open Daily: 11 AM - 11 PM</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="message-circle"></i></a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <!-- Using a static map image as placeholder, normally an iframe would go here -->
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=800" alt="Location Map">
+                    <div class="map-overlay">
+                        <a href="https://maps.google.com/?q=Bundi+Highway+Rajasthan" target="_blank" class="btn btn-secondary">Open in Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Aman Panjabi</h3>
+                    <p>Authentic Punjabi & North Indian Restaurant in Bundi. Quality food, rich flavors.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <p>Terms of Service</p>
+                    <p>Privacy Policy</p>
+                    <p>Order Status</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-flex">
+                        <i data-lucide="instagram"></i>
+                        <i data-lucide="facebook"></i>
+                        <i data-lucide="twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aman Panjabi Restaurant. Designed with Passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button onclick="toggleCart()"><i data-lucide="x"></i></button>
+        </div>
+        <div id="cart-items" class="cart-body">
+            <!-- Items injected by JS -->
+            <div class="empty-cart">
+                <i data-lucide="shopping-bag" size="48"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <button class="btn btn-whatsapp" id="whatsapp-order-btn" onclick="sendWhatsAppOrder()">
+                <i data-lucide="message-circle"></i> Send WhatsApp Order
+            </button>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
